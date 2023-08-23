@@ -6,13 +6,15 @@ let tempoRimanente=dataDomaniMs-dataOdiernaMs;
 let day= document.getElementById('days');
 let minute= document.getElementById('minutes');
 let second= document.getElementById('seconds');
-tempoRimanente= tempoRimanente/1000;
-console.log(tempoRimanente);
-tempoRimanente= tempoRimanente/60;
-console.log(tempoRimanente);
-console.log(day)
-tempoRimanente= tempoRimanente/60;
-console.log(tempoRimanente);
 let countDown= setInterval(function(){
-    
-})
+    let secondiTot= tempoRimanente/1000;
+    let cMinute= secondiTot / 60;
+    cOre= parseInt((secondiTot/60)/60);
+    cMinute=cMinute-(cOre*60);
+    let cSecond= parseInt((cMinute-parseInt(cMinute))*60);
+    cMinute=parseInt(cMinute);
+    console.log('ORE:'+cOre);
+    console.log('MINUTI:'+cMinute);
+    console.log('SECONDI:'+cSecond);
+    secondiTot=secondiTot-10;
+},10);
