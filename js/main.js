@@ -6,13 +6,13 @@ let divRisposta = document.getElementById('risposta');
 let numGame = 5;
 let arraytCpu= [];
 let arrayUser= [];
-let startGame;
-let listaDiv;
 gameInput.classList.add('d-none');
+
+
 btnStart.addEventListener('click',function(){
-    listaDiv = setupGame(arraytCpu,numGame,divRisposta);
-    startGame= setTimeout(removeElement,9000);
-    listaDiv[0].innerHTML = 'CIAO';
+    setupGame(arraytCpu,numGame,divRisposta);
+    setTimeout(removeElement,9000);
+    
     console.log(arraytCpu);
 });
 
@@ -25,11 +25,8 @@ function setupGame(array,num,counteiner){
         list[i].innerHTML= array[i];
         counteiner.append(list[i]);
     }
-    return list;
 }
 
 function removeElement(){
-for (let i; i<listaDiv.length;i++){
-    listaDiv[i].innerHTML = '';
-}
+divRisposta.innerHTML = ''
 }
