@@ -28,7 +28,7 @@ function setupGame(array,num,counteiner){
 }
 
 function removeElement(){
-for (let i; i<listaNUmeri.length;i++){
+for (let i; i<listaDiv.length;i++){
     listaDiv[i].innerHTML = '';
 }
 }
