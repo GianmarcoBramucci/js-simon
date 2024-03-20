@@ -12,6 +12,7 @@ gameInput.classList.add('d-none');
 btnStart.addEventListener('click',function(){
     listaDiv = setupGame(arraytCpu,numGame,divRisposta);
     startGame= setTimeout(removeElement,9000);
+    listaDiv[0].innerHTML = 'CIAO';
     console.log(arraytCpu);
 });
 
