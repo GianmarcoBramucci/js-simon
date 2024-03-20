@@ -7,12 +7,11 @@ let numGame = 5;
 let arraytCpu= [];
 let arrayUser= [];
 let startGame;
-let listaNUmeri
+let listaDiv;
 gameInput.classList.add('d-none');
 btnStart.addEventListener('click',function(){
-    listaNUmeri = setupGame(arraytCpu,numGame,divRisposta);
-    startGame= setTimeout(removeElement(),9000);
-
+    listaDiv = setupGame(arraytCpu,numGame,divRisposta);
+    startGame= setTimeout(removeElement,9000);
     console.log(arraytCpu);
 });
 
@@ -30,6 +29,6 @@ function setupGame(array,num,counteiner){
 
 function removeElement(){
 for (let i; i<listaNUmeri.length;i++){
-    listaNUmeri[i].remove();
+    listaDiv[i].innerHTML = '';
 }
 }
