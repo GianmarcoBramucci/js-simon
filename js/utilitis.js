@@ -12,8 +12,15 @@ function getRndInteger(min, max) {
 //? ritorno : {object} ci ritorna l'elemento div 
 
 function getProgressiveDivId(nomeId,i,classe,html) {
-	let idValue=`${nomeId}${i}`;
+	let idValue=``;
 	let div= document.createElement('div');
+	let value;
+	if(check){
+		idValue = `${nomeId}-${i+1}`;
+	}
+	else{
+		idValue = nomeId;
+	}
 	div.setAttribute('id', idValue);
 	div.className = classe;
 	div.innerHTML = html;
