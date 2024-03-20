@@ -1,11 +1,20 @@
+let gameInput = document.getElementById('input-game');
 let input = document.getElementById('input73');
 let btn = document.getElementById('btn-submit37');
+let btnStart= document.getElementById('btn-submit73');
 let divRisposta = document.getElementById('risposta');
 let numGame = 5;
 let arraytCpu= [];
 let arrayUser= [];
-const startGame = setTimeout(setupGame(arraytCpu,numGame,divRisposta),9000);
-console.log(arraytCpu);
+let startGame;
+let listaNUmeri
+gameInput.classList.add('d-none');
+btnStart.addEventListener('click',function(){
+    listaNUmeri = setupGame(arraytCpu,numGame,divRisposta);
+    startGame= setTimeout(removeElement(),9000);
+
+    console.log(arraytCpu);
+});
 
 
 function setupGame(array,num,counteiner){
@@ -16,6 +25,11 @@ function setupGame(array,num,counteiner){
         list[i].innerHTML= array[i];
         counteiner.append(list[i]);
     }
+    return list;
 }
 
-
+function removeElement(){
+for (let i; i<listaNUmeri.length;i++){
+    listaNUmeri[i].remove();
+}
+}
